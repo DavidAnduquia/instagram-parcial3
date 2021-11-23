@@ -31,17 +31,18 @@ const LoginForm = () => {
             size="medium"
           />
         </FormControl>
-        <button>Iniciar Sesión</button>
-        <img src="/separador.png" alt="" />
-        <p>
-          <img src="" alt="" /> Inicia sesión con Google
-        </p>
-        <a href="">¿Has olvidado la contraseña?</a>
+        <button style={{fontSize:'0.9rem',fontWeight:'600', width:'100%', margin:'10px 0px', height:'35px', color:'#fff', backgroundColor:'#2F95F6', border:'solid 1px', borderRadius:'5px' }}>Iniciar Sesión</button>
+
+        <img style={_LoginForm.imgseparador} src="/separador.png"  />
+        <a href="" style={{color:'#0076C3', fontWeight:'800', marginTop:'20px', textDecoration:'none'}}>
+          <img src="/google.png" alt="" /> Inicia sesión con Google
+        </a>
+        <a style={_LoginForm.linkNonePass} href="">¿Has olvidado la contraseña?</a>
       </div>
 
       <div style={_LoginForm.notienescuenta}>
         <p>
-          ¿No tienes una cuenta? <a href="">Regístrate</a>
+          ¿No tienes una cuenta? <a style={_LoginForm.linkNoneRegister} href="">Regístrate</a>
         </p>
       </div>
       <div style={_LoginForm.descargarapp}>Descargar app</div>
@@ -55,18 +56,20 @@ const _LoginForm = {
     display: "flex",
     flexDirection: "column",
     flex: "1",
-    maxWidth:'45vh'
+    maxWidth:'40vh',
   },
   imagenInsta: {
-    maxWidth: "300px",
+    maxWidth: "180px",
   },
+  
   formCtrl: {
     display: "flex",
     flexDirection: "column",
-    padding: "20px 50px",
+    padding: "20px 30px",
     border: "1px solid #C1C1C1",
     alignItems: "center",
     justifyContent: "center",
+    paddingBottom:'30px'
   },
   notienescuenta: {
     display: "flex",
@@ -86,13 +89,30 @@ const _LoginForm = {
     marginTop: "10px",
   },
   formControl: {
-    fontSize: "12px",
+    width:"100%",
+    marginTop: "10px",
   },
   input: {
     fontSize: "14px",
-    width: "280px",
+    
   },
   labelInput: {},
+  imgseparador:{
+    width: "100%"
+  },
+  linkNone:{
+    textDecoration:'none' 
+ },
+ linkNonePass:{
+  textDecoration:'none',
+  marginTop: "20px",
+  color:'#0D376B'
+},
+linkNoneRegister:{
+  textDecoration:'none',
+  fontWeight:'600',
+  color:'#2F95F6'
+}
 
 };
 

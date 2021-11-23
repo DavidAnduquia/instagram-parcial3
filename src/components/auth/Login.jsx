@@ -12,36 +12,40 @@ const Login = () => {
         </div>
 
         <div style={_loginStyle.containerFooter}>
-          <a href="https://about.facebook.com/meta">Meta</a>
-          <a href="https://about.instagram.com/">Información</a>
-          <a href="https://about.instagram.com/blog/">Blog</a>
-          <a href="https://www.instagram.com/about/jobs/">Empleo</a>
-          <a href="https://help.instagram.com/">Ayuda</a>
-          <a href="https://developers.facebook.com/docs/instagram">API</a>
-          <a href="https://www.instagram.com/legal/privacy/">Privacidad</a>
-          <a href="https://www.instagram.com/legal/terms/">Condiciones</a>
-          <a href="https://www.instagram.com/directory/profiles/">
+          <a style={_loginStyle.linkNoneFotter} href="https://about.facebook.com/meta">Meta</a>
+          <a style={_loginStyle.linkNoneFotter} href="https://about.instagram.com/">Información</a>
+          <a style={_loginStyle.linkNoneFotter} href="https://about.instagram.com/blog/">Blog</a>
+          <a style={_loginStyle.linkNoneFotter} href="https://www.instagram.com/about/jobs/">Empleo</a>
+          <a style={_loginStyle.linkNoneFotter} href="https://help.instagram.com/">Ayuda</a>
+          <a style={_loginStyle.linkNoneFotter} href="https://developers.facebook.com/docs/instagram">API</a>
+          <a style={_loginStyle.linkNoneFotter} href="https://www.instagram.com/legal/privacy/">Privacidad</a>
+          <a style={_loginStyle.linkNoneFotter} href="https://www.instagram.com/legal/terms/">Condiciones</a>
+          <a style={_loginStyle.linkNoneFotter} href="https://www.instagram.com/directory/profiles/">
             {" "}
             Cuentas destacadas{" "}
           </a>
-          <a href="https://www.instagram.com/directory/hashtags/">Hashtags</a>
-          <a href="https://www.instagram.com/explore/locations/">Ubicaciones</a>
-          <a href="https://www.instagram.com/web/lite/">Instagram Lite</a>
-          <a href="https://www.instagram.com/topics/beauty/">Belleza</a>
-          <a href="https://www.instagram.com/topics/dance-and-performance/">
+          <a style={_loginStyle.linkNoneFotter} href="https://www.instagram.com/directory/hashtags/">Hashtags</a>
+          <a style={_loginStyle.linkNoneFotter} href="https://www.instagram.com/explore/locations/">Ubicaciones</a>
+          <a style={_loginStyle.linkNoneFotter} href="https://www.instagram.com/web/lite/">Instagram Lite</a>
+          <a style={_loginStyle.linkNoneFotter} href="https://www.instagram.com/topics/beauty/">Belleza</a>
+          <a style={_loginStyle.linkNoneFotter} href="https://www.instagram.com/topics/dance-and-performance/">
             Danza
           </a>
-          <a href="https://www.instagram.com/topics/fitness/">Fitness</a>
-          <a href="https://www.instagram.com/topics/food-and-drink/">
+          <a style={_loginStyle.linkNoneFotter} href="https://www.instagram.com/topics/fitness/">Fitness</a>
+          <a style={_loginStyle.linkNoneFotter} href="https://www.instagram.com/topics/food-and-drink/">
             Comida y bebida
           </a>
-          <a href="https://www.instagram.com/topics/home-and-garden/">
+          <a style={_loginStyle.linkNoneFotter} href="https://www.instagram.com/topics/home-and-garden/">
             Casa y jardín
           </a>
-          <a href="https://www.instagram.com/topics/music/">Música</a>
-          <a href="https://www.instagram.com/topics/visual-arts/">
+          <a style={_loginStyle.linkNoneFotter} href="https://www.instagram.com/topics/music/">Música</a>
+          <a style={_loginStyle.linkNoneFotter} href="https://www.instagram.com/topics/visual-arts/">
             Artes visuales
           </a>
+        </div>
+        <div style={{color:'#8C8C8C'}}>
+            <p>Español (España) ^ 
+             © 2021 Instagram from Meta</p>
         </div>
       </div>
     </>
@@ -55,6 +59,8 @@ const _loginStyle = {
     display: "flex",
     alignItems: "center",
     flexDirection: "column",
+    fontSize:'0.9rem',
+    fontWeight: '500',
     justifyContent: "center",
   },
   containerBody: {
@@ -62,15 +68,27 @@ const _loginStyle = {
     flexDirection: "row",
   },
   imgContainerBody:{
-      maxWidth: "40vh",
-    flex: "2"
+    maxWidth: "40vh",
+    margin:'0px 20px'
   },
 
   containerFooter: {
-    display: "flex",
-    marginTop: "30px",
 
+    display: "flex",
+    flexDirection:'row',
+    justifyContent: "space-around",
+    flexWrap:'wrap',
+    marginTop: "40px",
+    width:'90vh',
   },
+  linkNone:{
+    textDecoration:'none' 
+ },
+ linkNoneFotter:{
+    textDecoration:'none',
+    margin:'5px',
+    color:'#8C8C8C'
+ }
 };
 
 export default Login;
