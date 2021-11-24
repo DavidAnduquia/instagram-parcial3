@@ -8,7 +8,9 @@ const Home = () => {
   return (
     <div style={_HomeStyle.container}>
     
+
         <Header/>
+    
         <div style={_HomeStyle.bodyHome}>
           <PinCard />  
           <InformacionCard />
@@ -29,12 +31,14 @@ const _HomeStyle = {
       flexDirection:'column',
       justifyContent:'center',
       alignItems: 'center',
+      fontFamily: 'Poppins sans-serif',
       
     },
     bodyHome:{
       display:'flex',
-      width: '950px',
-      maxWidth:'1100px',
+      flexDirection:'row',
+      width:'60%',
+      maxWidth:'100%',
       
     }
 

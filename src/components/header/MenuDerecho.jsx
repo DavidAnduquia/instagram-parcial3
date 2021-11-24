@@ -24,7 +24,9 @@ const _HeaderStyle = {
 
   container:{
     display: 'flex',
-    flex: 1 ,
+    width: '250px',
+    maxWidth: '250px',
+    justifyContent: 'space-between'
     
   }
 }

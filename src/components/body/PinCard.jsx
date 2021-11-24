@@ -23,7 +23,7 @@ const PinCard = () => {
 
     return (
       <div style={_styles.mainDiv}>   
-          <div style={{maxWidth: '100%'}}>
+          <div style={{maxWidth: 'auto'}}>
             <HistoriesComponent/>
           </div>
           <div style={_styles.pindiv}>
@@ -43,10 +43,10 @@ const PinCard = () => {
   
 const _styles = {
   mainDiv : {
-    width:'70%',
-    margingRight: '50px'
+    maxWidth:'65%',
   },
   pindiv:{
+    marginTop:'25px',
     width:'100%'
   }
 }

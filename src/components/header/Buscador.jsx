@@ -6,7 +6,7 @@ const Buscador = () =>  {
         <div style={_buscadorStyle.container}>
             <SearchIcon style={_buscadorStyle.iconSearch} />
             <form  style={_buscadorStyle.form}>
-            <input placeholder="Busca" style={_buscadorStyle.input} type="text" /> 
+            <input placeholder="Buscar" style={_buscadorStyle.input} type="text" /> 
             <button style={_buscadorStyle.btn} type="submit"></button> 
             </form>
         </div>
@@ -17,11 +17,12 @@ const _buscadorStyle = {
 
     container:{
         backgroundColor:'#fafafa',
-        borderRadius:4,
+        borderRadius:'3px',
         display: 'flex',
         alignItems:'center',
         border: 'solid 1px #dbdbdb',
-        height:30,
+        height:'25px',
+        
     },
 
     form:{
@@ -32,16 +33,16 @@ const _buscadorStyle = {
     iconSearch:{
         paddingLeft:10,  
         fontSize:20,
-        color: '#767676',
-        stroke: "#767676",
-        strokeWidth:2,
+        color: '#CDCDCD',
+        stroke: "#CDCDCD",
+        strokeWidth:1,
+        maxWidth:'15px'
     },
 
     input:{
      
         backgroundColor: 'transparent',
         border:'none',
-        width: '90%',
         marginLeft: 5,
         fontSize:15,
         outline: 'none',

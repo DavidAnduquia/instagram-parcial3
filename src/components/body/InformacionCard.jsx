@@ -1,104 +1,104 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import consultaMenor from "../../services/dataApiDos";
 
 const InformacionCard = () => {
+
+
+  const [fotos,setPhotos] = useState([]);
+
+  useEffect(() => {
+    loadImages();
+  }, []);
+
+  const loadImages = async () => {
+    const res = await consultaMenor();
+  
+    setPhotos(res.data.photos);
+  };
+
+
+
   return (
     <div style={_style.maindiv}>
       <div style={_style.perfil}>
-        <div style={{display: "flex", flexDirection: "column", alignItems: "center"}} >
-          <div  style={_style.divImg} >
-            <img style={_style.imgHIst} src="/i.jpeg" alt="" />
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <img style={_style.imgHIstUno} src="/i.jpeg" alt="" />
+          <div style={{ marginLeft: "15px" }}>
+            <span style={{ fontSize: "1rem", fontWeight: "bold", fontFamily: 'Poppins sans-serif', }}>seedch</span>
+            <br />
+            <span style={{ color: "#A7A7A7" }}>carlos castillo</span>
           </div>
         </div>
-        <div>
-          seedcharlie
-          carlos castillo
-        </div>
-        <a href="">Cambiar</a>
+        <a style={_style.link} href="">
+          Cambiar
+        </a>
       </div>
 
-      <div style={{display: "flex", alignItems: "center", alignContent: "espace-between"}}>
-        <p style={{margin:'5px'}}>Sugerencias para ti</p>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          alignContent: "espace-between",
+        }}
+      >
+        <p style={{ margin: "5px" }}>Sugerencias para ti</p>
         <p>Ver todo</p>
       </div>
 
-      <div style={_style.perfil}>
-        <div style={{display: "flex", flexDirection: "column", alignItems: "center"}} >
-          <div   >
-            <img style={_style.imgHIst} src="/i.jpeg" alt="" />
+      {fotos.map((photo) => (
+        <div style={_style.perfil}>
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <img style={_style.imgHIst} src={photo.src.large} alt="" />
+          <div style={{ marginLeft: "15px" }}>
+            <span style={{ fontSize: "1rem", fontWeight: "bold" }}>seedch</span>
+            <br />
+            <span style={{ color: "#A7A7A7" }}>{photo.photographer}</span>
           </div>
         </div>
-        <div>
-          <p>
-          seedcharlie
-          carlos castillo
-          </p>
-        </div>
-        <a href="">seguir</a>
-      </div>
-      <div style={_style.perfil}>
-        <div style={{display: "flex", flexDirection: "column", alignItems: "center"}} >
-          <div  >
-            <img style={_style.imgHIst} src="/i.jpeg" alt="" />
-          </div>
-        </div>
-        <div>
-        <p>
-          seedcharlie
-          carlos castillo
-          </p>
-        </div>
-        <a href="">seguir</a>
-      </div>
-      <div style={_style.perfil}>
-        <div style={{display: "flex", flexDirection: "column", alignItems: "center"}} >
-          <div   >
-            <img style={_style.imgHIst} src="/i.jpeg" alt="" />
-          </div>
-        </div>
-        <div>
-        <p>
-          seedcharlie
-          carlos castillo
-          </p>
-        </div>
-        <a href="">seguir</a>
+        <a style={_style.link} href="">seguir</a>
       </div>
 
+      ))}
+
+      
     </div>
   );
 };
 
 const _style = {
   maindiv: {
-    margin: "14px 30px",
-    padding: "10px 30px",
+    margin: "50px 0px 10px 15px",
+    padding: "0px 0px 0px 10px",
     borderRadius: "10px 18px",
     backgroundColor: "white",
+    display: "flex",
+    flexDirection: "column",
+    width: "35%",
+    maxWidth: "35%",
   },
-  perfil:{
+  perfil: {
     width: "100%",
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
-    justifyContent : 'space-between',
-    
+    justifyContent: "space-between",
+    marginTop: "10px",
   },
-  divImg: {
-    maxWidth: "70px",
-    maxHeight: "70px",
-    margin: "0px 15px",
-    padding: "3px",
-    borderRadius: "50%",
-    background: "rgb(255,188,0)",
-    background:
-      "linear-gradient(90deg, rgba(255,188,0,1) 0%, rgba(227,2,237,1) 41%, rgba(255,0,56,1) 100%)",
-    display: "flex",
-    alignItems: "center",
-  },
+
   imgHIst: {
-    maxWidth: "60px",
-    maxHeight: "60px",
+    width: "40px",
+    height: "40px",
     borderRadius: "50%",
+  },
+  imgHIstUno: {
+    width: "60px",
+    height: "60px",
+    borderRadius: "50%",
+  },
+  link: {
+    textDecoration: "none",
+    color: "#0095F6",
+    fontWeight: "550",
   },
 };
 

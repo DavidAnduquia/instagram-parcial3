@@ -8,7 +8,7 @@ const Header = () => {
     <div style={_HeaderStyle.containermain} >
         <div style={_HeaderStyle.container}>
         <div >
-           <img src="/logoInstagram.png" width="200" height="50"></img> 
+           <img src="/logoInstagram.png" width="110" ></img> 
         </div>
         <div >
         <Buscador />
@@ -28,6 +28,8 @@ const _HeaderStyle = {
     display: "flex",
     justifyContent: "center",
     width: "100%",
+
+    backgroundColor:'white'
   },
   container:{
     display: "flex",
@@ -38,8 +40,7 @@ const _HeaderStyle = {
     color:'black',
     backgroundColor: '#fff',
     justifyContent : 'space-between',
-    width:'950px',
-    maxWidth: '1100px',
+    flexBasis: '60%',
   }
 }
 

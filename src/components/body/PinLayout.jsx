@@ -2,7 +2,6 @@ import React from "react";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 
 const PinLayout = ({ photo }) => {
-  console.log(photo);
 
   return (
     <div style={{ ..._stylesPinCard.pin_card }}>
@@ -31,15 +30,13 @@ const _stylesPinCard = {
     display:'flex',
     flexDirection:'column',
     height: "100%",
-    width: "100%",
-    marginTop:'15px',
+    marginTop:'20px',
     backgroundColor: "white",
     border: "1px solid #D8D8D8",
   },
 
   imgStyle: {
     width: "100%",
-    height: "100%",
     objectFit: "cover",
     imageRendering: "auto",
   },

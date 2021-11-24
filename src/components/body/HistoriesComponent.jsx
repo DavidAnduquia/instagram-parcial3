@@ -1,29 +1,43 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import consulta from "../../services/dataApi";
 
 const HistoriesComponent = () => {
+
+  const [fotos,setPhotos] = useState([]);
+
+  useEffect(() => {
+    loadImages();
+  }, []);
+
+  const loadImages = async () => {
+    const res = await consulta();
+  
+    setPhotos(res.data.photos);
+  };
+
   return (
     <div style={_style.mainDiv}>
-      <div
-        style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
-        <div style={_style.divImg}>
-          <img style={_style.imgHIst} src="/i.jpeg" alt="" />
+      {fotos.map((photo) => (
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            alignContent:'center',
+          }}
+        >
+          <div style={_style.divImg}>
+            <div style={_style.divImgdos}>
+              <img style={_style.imgHIst} src={photo.src.large} alt="" />
+            </div>
+          </div>
+          <h6 style={{
+            maxHeight:'70px', margin:'0px', marginTop: '7px', fontWeight:'500'
+          }}>
+          {photo.photographer}
+          </h6>
         </div>
-        carlos
-      </div>
-      <div
-        style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
-        <div style={_style.divImg}>
-          <img style={_style.imgHIst} src="/i.jpeg" alt="" />
-        </div>
-        carlos
-      </div>
-      <div
-        style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
-        <div style={_style.divImg}>
-          <img style={_style.imgHIst} src="/i.jpeg" alt="" />
-        </div>
-        carlos
-      </div>
+      ))}
     </div>
   );
 };
@@ -32,16 +46,20 @@ const _style = {
   mainDiv: {
     display: "flex",
     flexDirection: "row",
-    padding: "10px",
-    border: "1px solid #D8D8D8",
-    width: "100%",
-    marginTop: "20px",
+    padding: "20px 10px",
+    border: "0.5px solid #D8D8D8",
+    marginTop: "30px",
+    backgroundColor: "white",
+    borderRadius: "4px",
+    overflow: 'auto',
+    whiteSpace: 'nowrap',
+    scrollbarHeight: 'none',
   },
   divImg: {
-    maxWidth: "90px",
-    maxHeight: "90px",
+    width: "63px",
+    height: "63px",
     margin: "0px 15px",
-    padding: "3px",
+    padding: "2px",
     borderRadius: "50%",
     background: "rgb(255,188,0)",
     background:
@@ -49,9 +67,18 @@ const _style = {
     display: "flex",
     alignItems: "center",
   },
+  divImgdos: {
+    width: "60px",
+    height: "60px",
+    padding: "2px",
+    borderRadius: "50%",
+    backgroundColor: "white",
+    display: "flex",
+    alignItems: "center",
+  },
   imgHIst: {
-    maxWidth: "80px",
-    maxHeight: "80px",
+    width: "58px",
+    height: "58px",
     borderRadius: "50%",
   },
 };
