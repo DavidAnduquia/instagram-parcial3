@@ -75,7 +75,7 @@ const LoginForm = () => {
         <img style={_LoginForm.imgseparador} src="/separador.png"  />
        
         <GoogleLogin
-      clientId="658977310896-knrl3gka66fldh83dao2rhgbblmd4un9.apps.googleusercontent.com"
+      clientId="235998716651-ai03rgnjb3r3jrgp4vufhvm6t3kflg0o.apps.googleusercontent.com"
       buttonText="Login"
       onSuccess={onLoginSuccess}
       onFailure={onFailureSuccess}
