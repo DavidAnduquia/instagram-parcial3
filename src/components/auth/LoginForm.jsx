@@ -99,7 +99,6 @@ const LoginForm = () => {
       <div style={_LoginForm.descargarapp}>Descargar app</div>
       <img src="/apps.png" alt="" />
    
-      <Link to="/home" > aqt </Link>
      
 
   
