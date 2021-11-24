@@ -28,8 +28,10 @@ const InformacionCard = () => {
           </div>
         </div>
         <div>
+          <p>
           seedcharlie
           carlos castillo
+          </p>
         </div>
         <a href="">seguir</a>
       </div>
@@ -40,8 +42,10 @@ const InformacionCard = () => {
           </div>
         </div>
         <div>
+        <p>
           seedcharlie
           carlos castillo
+          </p>
         </div>
         <a href="">seguir</a>
       </div>
@@ -52,8 +56,10 @@ const InformacionCard = () => {
           </div>
         </div>
         <div>
+        <p>
           seedcharlie
           carlos castillo
+          </p>
         </div>
         <a href="">seguir</a>
       </div>
