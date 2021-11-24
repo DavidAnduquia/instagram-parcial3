@@ -23,7 +23,9 @@ const PinCard = () => {
 
     return (
       <div style={_styles.mainDiv}>   
-          <HistoriesComponent/>
+          <div style={{maxWidth: '100%'}}>
+            <HistoriesComponent/>
+          </div>
           <div style={_styles.pindiv}>
           {
             photos.map((photo) => (
@@ -41,7 +43,8 @@ const PinCard = () => {
   
 const _styles = {
   mainDiv : {
-    width:'100%'
+    width:'70%',
+    margingRight: '50px'
   },
   pindiv:{
     width:'100%'

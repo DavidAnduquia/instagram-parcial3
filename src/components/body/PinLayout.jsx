@@ -31,6 +31,7 @@ const _stylesPinCard = {
     display:'flex',
     flexDirection:'column',
     height: "100%",
+    width: "100%",
     marginTop:'15px',
     backgroundColor: "white",
     border: "1px solid #D8D8D8",
