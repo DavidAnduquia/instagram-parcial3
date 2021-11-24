@@ -4,7 +4,7 @@ const InformacionCard = () => {
 
    
     return (
-      <div>   
+      <div style={_style}>   
             <span> info </span>
             <span> info </span>
             <span> info </span>
@@ -17,7 +17,15 @@ const InformacionCard = () => {
     );
   }
   
+const _style = {
+  top: '20px',
+  margin: '14px', 
+  borderRadius: '10px 18px',
+  backgroundColor:'white',
+  position: '-webkit-sticky',
+  position: 'sticky',
  
+}
   
   
   export default InformacionCard;

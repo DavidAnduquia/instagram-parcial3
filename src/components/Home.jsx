@@ -1,23 +1,22 @@
 import React from 'react'; 
 import InformacionCard from './body/InformacionCard';
 import PinCard from './body/PinCard';
+import Header from './header/Header';
  
   
 const Home = () => {
   return (
     <div style={_HomeStyle.container}>
     
-
-        <div> 
-        <PinCard />   
-        </div>
-
-        <div style={_HomeStyle.infoUser}>
+        <Header/>
+        <div style={_HomeStyle.bodyHome}>
+          <PinCard />  
           <InformacionCard />
         </div> 
         
       
     </div>
+    
   );
 }
 
@@ -25,20 +24,20 @@ const Home = () => {
 const _HomeStyle = {
 
     container:{
+      width: '100%',
       display:'flex',
-      flexDirection:'row',
+      flexDirection:'column',
       justifyContent:'center',
+      alignItems: 'center',
       
     },
-
-    infoUser:{
-      width:'20%',
-      height:'100%',
-      margin: '14px', 
-      borderRadius: '10px 18px',
-      backgroundColor:'white',
-      position: 'fixed', 
+    bodyHome:{
+      display:'flex',
+      width: '950px',
+      maxWidth:'1100px',
+      
     }
+
 
 
 }

@@ -54,6 +54,7 @@ const Login = () => {
 
 const _loginStyle = {
   containerFlex: {
+    fontFamily: 'Poppins sans-serif',
     width: "100%",
     height: "100vh",
     display: "flex",

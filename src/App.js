@@ -12,11 +12,11 @@ import {
 
 function App() {
   return (
-    <div className="App" style={_AppStyle.container}>
+    <div >
    {/*     <Header /> */}
     {/*    <Home /> */}
 
-      <Login />
+      <Home />
     </div>
   );
 }
@@ -24,7 +24,7 @@ function App() {
 const _AppStyle = {
 
   container:{
- 
+    with:'100%'
   }
 
 

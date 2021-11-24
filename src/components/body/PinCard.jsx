@@ -1,5 +1,6 @@
 import React,{ useEffect, useState } from "react";
 import consulta from "../../services/dataApi";
+import HistoriesComponent from "./HistoriesComponent";
 import PinLayout from "./PinLayout";
 
  
@@ -21,20 +22,31 @@ const PinCard = () => {
     }
 
     return (
-      <div>   
-         {
+      <div style={_styles.mainDiv}>   
+          <HistoriesComponent/>
+          <div style={_styles.pindiv}>
+          {
             photos.map((photo) => (
                 <PinLayout 
                  photo = {photo}
                 />
             ))
           } 
+          </div>
+         
 
       </div>
     );
   }
   
- 
+const _styles = {
+  mainDiv : {
+    width:'100%'
+  },
+  pindiv:{
+    width:'100%'
+  }
+}
   
   
-  export default PinCard;
+export default PinCard;

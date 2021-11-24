@@ -1,46 +1,68 @@
-import React from 'react'; 
-import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+import React from "react";
+import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 
-const PinLayout = ({photo}) => {
-    console.log(photo)
+const PinLayout = ({ photo }) => {
+  console.log(photo);
 
-    return (
-      <div  style={{..._stylesPinCard.pin_card }} >
-         <span> { photo.photographer } </span> 
-         <img src = { photo.src.large } style= {_stylesPinCard.imgStyle} alt=""></img>
-
-
-         <FavoriteBorderOutlinedIcon />
-
-         <span> ICON 2</span>
-         <span> ICON 3</span>
-         <span> ICON 4</span>
-
-
-         <span> 40 Me gusta</span>
-          
+  return (
+    <div style={{ ..._stylesPinCard.pin_card }}>
+      <div style={{..._stylesPinCard.infoAutor}}>
+        <div style={{ ..._stylesPinCard.divImg}} >
+        <img style={{ ..._stylesPinCard.imgHIst}} src="/i.jpeg" alt="" />
+        </div>
+      <span> {photo.photographer} <br /> Manchester, United Kingdom</span>
       </div>
-    );
-  }
- 
+      
+      <img src={photo.src.large} style={_stylesPinCard.imgStyle} alt=""></img>
 
- const _stylesPinCard =  {
-    pin_card: {
-        width:'38%',
-        height:'100%',
-        margin: '14px 10px  ',
-        borderRadius: '10px',
-        backgroundColor:'white'
-    },
+      <div>
+      <FavoriteBorderOutlinedIcon />
+      <FavoriteBorderOutlinedIcon />
+      <FavoriteBorderOutlinedIcon />
+      <FavoriteBorderOutlinedIcon />
+      <FavoriteBorderOutlinedIcon />
+      </div>
+    </div>
+  );
+};
 
-    imgStyle:{
-        width:'100%',
-        height:'100%',
-        objectFit:'cover',
-        imageRendering:'auto'
-    }
+const _stylesPinCard = {
+  pin_card: {
+    display:'flex',
+    flexDirection:'column',
+    height: "100%",
+    marginTop:'15px',
+    backgroundColor: "white",
+    border: "1px solid #D8D8D8",
+  },
 
- }
+  imgStyle: {
+    width: "100%",
+    height: "100%",
+    objectFit: "cover",
+    imageRendering: "auto",
+  },
+  imgHIst: {
+    maxWidth: "60px",
+    maxHeight: "60px",
+    borderRadius: "50%",
+  },
+  infoAutor:{
+    display: "flex",
+    padding:'10px',
+    alignItems: "center",
+  },
+  divImg: {
+    maxWidth: "70px",
+    maxHeight: "70px",
+    margin: "0px 15px",
+    padding: "3px",
+    borderRadius: "50%",
+    background: 'rgb(255,188,0)',
+    background: 'linear-gradient(90deg, rgba(255,188,0,1) 0%, rgba(227,2,237,1) 41%, rgba(255,0,56,1) 100%)',
+    display: "flex",
+    alignItems: "center",
+  },
+};
 
-
-  export default PinLayout;
+export default PinLayout;
